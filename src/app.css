@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html,
+:host {
+	font-family: 'JetBrains Mono', monospace;
+}
+
+body {
+	margin: 0;
+	overflow: clip;
+	background-color: #1a1b26;
+	background-size: cover;
+	background-image: url('/background.svg');
+}
+
+*::-webkit-scrollbar {
+	display: none;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
