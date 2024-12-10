@@ -13,7 +13,6 @@
 				class="group mx-2 inline-flex w-fit items-center border-cyan pr-2 text-fg no-underline transition-colors hover:border-b hover:text-cyan"
 				href="/projects"
 				rel="noopener noreferrer"
-				target="_blank"
 			>
 				View All Projects
 				<svg
