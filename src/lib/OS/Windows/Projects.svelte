@@ -1,52 +1,33 @@
 <script lang="ts">
-	import Window from '$lib/UI/Windows/Templates/Window.svelte';
+	import { projects } from '$lib/state.svelte';
 
-	const projects: { [key: string]: { [key: string]: string } } = {
-		'Obsidian Tokyo Night Theme': {
-			cover:
-				'https://raw.githubusercontent.com/tcmmichaelb139/obsidian-tokyonight/refs/heads/main/dark2.png',
-			description:
-				'A tokyonight theme for Obsidian. Colors from tokyonight.nvim and VSCode Tokyonight.',
-			github: 'https://github.com/tcmmichaelb139/obsidian-tokyonight',
-			demo: ''
-		},
-		'.dotfiles': {
-			cover:
-				'https://raw.githubusercontent.com/tcmmichaelb139/.dotfiles/refs/heads/main/assets/desktop-full.png',
-			description:
-				'Personal dotfiles managed with stow. Include configurations for various applications.',
-			github: 'https://github.com/tcmmichaelb139/.dotfiles',
-			demo: ''
-		},
-		'Particle Avoidance Simulator': {
-			cover:
-				'https://raw.githubusercontent.com/tcmmichaelb139/particle-avoidance/refs/heads/main/assets/torus.png',
-			description:
-				'A simple particle simulator for various objects including spheres and cubes where the particles avoid the mouse based on certain parameters.',
-			github: 'https://github.com/tcmmichaelb139/particle-avoidance',
-			demo: 'https://avoid-particles.michaelbao.io/'
-		},
-		'24 Game': {
-			cover:
-				'https://raw.githubusercontent.com/tcmmichaelb139/24/refs/heads/main/assets/website.png',
-			description:
-				'24 game solver and generator. A simple game where you have to use 4 numbers to get 24 using basic operations.',
-			github: 'https://github.com/tcmmichaelb139/24',
-			demo: 'https://24.michaelbao.io/'
-		},
-		'Grid Art': {
-			cover:
-				'https://raw.githubusercontent.com/tcmmichaelb139/Grid-Art/refs/heads/master/assets/website.png',
-			description: 'Creating art with grids. ',
-			github: 'https://github.com/tcmmichaelb139/Grid-Art',
-			demo: 'https://grid-art.michaelbao.io/'
-		}
-	};
+	import Window from '$lib/OS/Windows/Templates/Window.svelte';
+
+	const projectList = Object.fromEntries(Object.entries(projects).slice(0, 5));
 </script>
 
 <Window appName="Projects">
 	<div class="flex flex-col gap-4">
-		{#each Object.keys(projects) as project}
+		<div class="border-b border-gray/30 pb-2">
+			<a
+				class="group mx-2 inline-flex w-fit items-center border-cyan pr-2 text-fg no-underline transition-colors hover:border-b hover:text-cyan"
+				href="/projects"
+				rel="noopener noreferrer"
+				target="_blank"
+			>
+				View All Projects
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="currentColor"
+					class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-2"
+					><path
+						d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+					></path></svg
+				>
+			</a>
+		</div>
+		{#each Object.keys(projectList) as project}
 			<a
 				class="flex flex-col items-start justify-start gap-4 rounded-md p-2 no-underline transition-all hover:bg-bg-alt sm:flex-row"
 				href={projects[project].demo || projects[project].github}

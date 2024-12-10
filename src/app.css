@@ -7,9 +7,13 @@
 html,
 :host {
 	font-family: 'JetBrains Mono', monospace;
+	height: 100%;
+	width: 100%;
 }
 
 body {
+	height: 100%;
+	width: 100%;
 	margin: 0;
 	overflow: clip;
 	background-color: #1a1b26;

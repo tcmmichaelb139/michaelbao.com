@@ -1,6 +1,6 @@
 <script lang="ts">
-	import LeftBar from '$lib/UI/Bar/LeftBar.svelte';
-	import RightBar from '$lib/UI/Bar/RightBar.svelte';
+	import LeftBar from '$lib/OS/Bar/LeftBar.svelte';
+	import RightBar from '$lib/OS/Bar/RightBar.svelte';
 </script>
 
 <nav

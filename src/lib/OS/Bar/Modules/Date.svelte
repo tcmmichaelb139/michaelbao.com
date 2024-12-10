@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	import Boundary from '$lib/UI/Bar/Modules/Templates/Boundary.svelte';
-	import Svg from '$lib/UI/Bar/Modules/Templates/Svg.svelte';
+	import Boundary from '$lib/OS/Bar/Modules/Templates/Boundary.svelte';
+	import Svg from '$lib/OS/Bar/Modules/Templates/Svg.svelte';
 
 	let date = $state(new Date());
 	const weekday = $derived(date.toLocaleDateString('en-US', { weekday: 'short' }));

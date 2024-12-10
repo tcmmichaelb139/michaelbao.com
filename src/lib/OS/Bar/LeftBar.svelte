@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Space from '$lib/UI/Bar/Modules/Space.svelte';
-	import Application from '$lib/UI/Bar/Modules/Application.svelte';
+	import Space from '$lib/OS/Bar/Modules/Space.svelte';
+	import Application from '$lib/OS/Bar/Modules/Application.svelte';
 
 	import { options } from '$lib/state.svelte';
 </script>

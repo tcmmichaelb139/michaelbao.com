@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { marked } from 'marked';
 
-	import Window from '$lib/UI/Windows/Templates/Window.svelte';
+	import Window from '$lib/OS/Windows/Templates/Window.svelte';
 
 	import AboutMe from '$lib/content/AboutMe.md?raw';
 </script>

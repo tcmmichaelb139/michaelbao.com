@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { options } from '$lib/state.svelte';
 
-	import Boundary from '$lib/UI/Bar/Modules/Templates/Boundary.svelte';
+	import Boundary from '$lib/OS/Bar/Modules/Templates/Boundary.svelte';
 
 	const spaceIcons = ['一', '二', '三', '四', '五', '六', '七', '八', '九'];
 

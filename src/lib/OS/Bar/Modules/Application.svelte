@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Boundary from '$lib/UI/Bar/Modules/Templates/Boundary.svelte';
+	import Boundary from '$lib/OS/Bar/Modules/Templates/Boundary.svelte';
 
 	import { options } from '$lib/state.svelte';
 </script>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import App from '$lib/UI/Desktop/Templates/App.svelte';
+	import App from '$lib/OS/Desktop/Templates/App.svelte';
 
 	const appOpening = 'About Me';
 </script>

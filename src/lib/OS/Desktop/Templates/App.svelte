@@ -10,7 +10,7 @@
 </script>
 
 <button
-	class="inline-flex w-24 flex-col items-center rounded-lg p-2 backdrop-blur-xl transition-all hover:bg-gray/50"
+	class="inline-flex w-24 flex-col items-center rounded-lg border-2 bg-bg/75 p-2 backdrop-blur-xl transition-all hover:bg-gray/75"
 	onclick={() => openApp()}
 >
 	<div class="w-12">

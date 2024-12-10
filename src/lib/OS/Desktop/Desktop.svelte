@@ -1,6 +1,6 @@
 <script lang="ts">
-	import AboutMe from '$lib/UI/Desktop/Apps/AboutMe.svelte';
-	import WhatIsThis from '$lib/UI/Desktop/Apps/WhatIsThis.svelte';
+	import AboutMe from '$lib/OS/Desktop/Apps/AboutMe.svelte';
+	import WhatIsThis from '$lib/OS/Desktop/Apps/WhatIsThis.svelte';
 	import Projects from './Apps/Projects.svelte';
 </script>
 
