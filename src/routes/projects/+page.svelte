@@ -6,8 +6,10 @@
 
 <SEO title="Projects" />
 
-<main class="h-full w-full bg-bg/85 px-5 py-12 text-fg backdrop-blur-xl md:px-12 md:py-16">
-	<div class="mx-auto w-fit overflow-auto p-2">
+<main
+	class="h-full w-full overflow-auto bg-bg/85 px-5 py-12 text-fg backdrop-blur-xl md:px-12 md:py-16"
+>
+	<div class="mx-auto w-fit p-2">
 		<a
 			class="group mb-2 inline-flex items-center text-sm font-bold leading-tight text-cyan transition-all"
 			href="/"
