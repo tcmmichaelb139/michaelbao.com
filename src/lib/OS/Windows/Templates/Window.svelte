@@ -27,6 +27,11 @@
 		moving.posY = defaultPosY;
 	});
 
+	function windowOnTop() {
+		options.focusApp = appName;
+		opened[appName] = options.zIndex++;
+	}
+
 	function onWindowDrag(event: Event) {
 		event.preventDefault();
 
@@ -35,8 +40,7 @@
 
 		moving.moving = true;
 
-		options.focusApp = appName;
-		opened[appName] = options.zIndex++;
+		windowOnTop();
 	}
 
 	function onMouseUp() {
@@ -65,7 +69,10 @@
 
 {#if initialMount && opened[appName] != -1}
 	<div
-		class="absolute inline-block overflow-clip rounded-lg bg-gradient-to-r from-orange to-purple p-0.5"
+		class="absolute inline-block overflow-clip rounded-lg bg-gradient-to-r from-orange to-purple p-0.5 transition-opacity {options.focusApp ===
+		appName
+			? 'opacity-100'
+			: 'opacity-75'}"
 		style="left: {moving.posX}px; top: {moving.posY}px; z-index: {opened[appName]}"
 		transition:scale={{ duration: 300 }}
 	>
@@ -91,6 +98,9 @@
 			<section
 				class="prose prose-sm prose-tokyonight max-w-2xl overflow-auto overflow-x-clip p-4"
 				style="width: {window.innerWidth - 4}px"
+				onmousedown={windowOnTop}
+				role="button"
+				tabindex="0"
 			>
 				{@render children()}
 			</section>
