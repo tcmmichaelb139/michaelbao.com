@@ -17,8 +17,6 @@ body {
 	margin: 0;
 	overflow: clip;
 	background-color: #1a1b26;
-	background-size: cover;
-	background-image: url('/background.svg');
 }
 
 *::-webkit-scrollbar {

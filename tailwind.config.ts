@@ -21,6 +21,9 @@ export default {
 			unknown: '#ffffff'
 		},
 		extend: {
+			backgroundImage: {
+				'background-image': 'url("/background.svg")'
+			},
 			typography: ({ theme }) => ({
 				tokyonight: {
 					css: {

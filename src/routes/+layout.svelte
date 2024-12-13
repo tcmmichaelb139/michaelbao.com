@@ -16,6 +16,6 @@
 	});
 </script>
 
-<div class="h-full w-full">
+<div class="bg-background-image h-full w-full bg-cover">
 	{@render children()}
 </div>

@@ -67,7 +67,7 @@
 	}
 </script>
 
-{#if initialMount && opened[appName] != -1}
+{#if initialMount && opened[appName] !== -1}
 	<div
 		class="absolute inline-block overflow-clip rounded-lg bg-gradient-to-r from-orange to-purple p-0.5 transition-opacity {options.focusApp ===
 		appName
