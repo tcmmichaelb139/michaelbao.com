@@ -78,5 +78,12 @@ export const projects: Projects = {
 		github: 'https://github.com/tcmmichaelb139/cfbot',
 		demo: 'https://cfbot.michaelbao.io/',
 		builtWith: ['React', 'D3.js', 'Chart.js', 'Tailwind CSS']
+	},
+	MBCP: {
+		cover: '',
+		description: 'Competitive programming stress testing tool',
+		github: 'https://github.com/tcmmichaelb139/mbcp',
+		demo: '',
+		builtWith: ['Python']
 	}
 };
