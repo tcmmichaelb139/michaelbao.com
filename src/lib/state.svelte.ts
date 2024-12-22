@@ -23,7 +23,7 @@ interface Projects {
 export const projects: Projects = {
 	'Obsidian Tokyo Night Theme': {
 		cover:
-			'https://raw.githubusercontent.com/tcmmichaelb139/obsidian-tokyonight/refs/heads/main/dark2.png',
+			'https://raw.githubusercontent.com/tcmmichaelb139/obsidian-tokyonight/refs/heads/main/tokyonight.png',
 		description:
 			'A tokyonight theme for Obsidian. Colors from tokyonight.nvim and VSCode Tokyonight.',
 		github: 'https://github.com/tcmmichaelb139/obsidian-tokyonight',

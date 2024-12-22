@@ -4,7 +4,7 @@
 	import Projects from './Apps/Projects.svelte';
 </script>
 
-<div class="m-2 flex flex-wrap gap-4">
+<div class="m-2 flex flex-col flex-wrap gap-4">
 	<AboutMe />
 	<Projects />
 	<WhatIsThis />
