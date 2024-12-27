@@ -108,4 +108,9 @@
 	</div>
 {/if}
 
+<!-- Hidden children to render for SEO -->
+<div class="hidden">
+	{@render children()}
+</div>
+
 <svelte:window onmouseup={onMouseUp} onmousemove={onMouseMove} />
