@@ -39,6 +39,15 @@ export const projects: Projects = {
 		demo: '',
 		builtWith: ['Lua', 'Bash', 'Toml', 'ZSH', 'Python']
 	},
+	'One Million Line Word Search': {
+		cover:
+			'https://raw.githubusercontent.com/tcmmichaelb139/onemillionwordsearch/refs/heads/main/assets/website.png',
+		description:
+			"A word search game with a million lines of words. The game has three line modes: 25, 100, and 100,000 (and yes it's not a million but close enough). The game is the same for everyone, so finding a word will show up for everyone.",
+		github: 'https://github.com/tcmmichaelb139/onemillionwordsearch',
+		demo: 'https://onemillionwordsearch.michaelbao.io/',
+		builtWith: ['Svelte', 'TypeScript', 'Tailwind CSS', 'Cloudflare Pages', 'Python']
+	},
 	'Particle Avoidance Simulator': {
 		cover:
 			'https://raw.githubusercontent.com/tcmmichaelb139/particle-avoidance/refs/heads/main/assets/torus.png',
@@ -46,7 +55,7 @@ export const projects: Projects = {
 			'A simple particle simulator for various objects including spheres and cubes where the particles avoid the mouse based on certain parameters.',
 		github: 'https://github.com/tcmmichaelb139/particle-avoidance',
 		demo: 'https://avoid-particles.michaelbao.io/',
-		builtWith: ['three.js', 'TypeScript', 'Svelte']
+		builtWith: ['three.js', 'TypeScript', 'Svelte', 'Cloudflare Pages']
 	},
 	'24 Game': {
 		cover: 'https://raw.githubusercontent.com/tcmmichaelb139/24/refs/heads/main/assets/website.png',
@@ -54,7 +63,7 @@ export const projects: Projects = {
 			'24 game solver and generator. A simple game where you have to use 4 numbers to get 24 using basic operations.',
 		github: 'https://github.com/tcmmichaelb139/24',
 		demo: 'https://24.michaelbao.io/',
-		builtWith: ['Svelte', 'TypeScript']
+		builtWith: ['Svelte', 'TypeScript', 'Cloudflare Pages']
 	},
 	'Grid Art': {
 		cover:
