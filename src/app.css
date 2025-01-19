@@ -16,7 +16,8 @@ body {
 	width: 100%;
 	margin: 0;
 	overflow: clip;
-	background-color: #1a1b26;
+	background-color: theme('colors.bg');
+	color: theme('colors.fg');
 }
 
 *::-webkit-scrollbar {
