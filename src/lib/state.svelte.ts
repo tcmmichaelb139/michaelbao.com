@@ -39,6 +39,15 @@ export const projects: Projects = {
 		demo: '',
 		builtWith: ['Lua', 'Bash', 'Toml', 'ZSH', 'Python']
 	},
+	VectorBoids: {
+		cover:
+			'https://raw.githubusercontent.com/tcmmichaelb139/VectorBoids/refs/heads/main/static/website.png',
+		description:
+			'Boids with vector fields. Uses the algorithm created by Craig Reynolds with the addition of vector fields.',
+		github: 'https://github.com/tcmmichaelb139/VectorBoids',
+		demo: 'https://vectorboids.michaelbao.io/',
+		builtWith: ['HTML Canvas', 'TypeScript', 'Tailwind CSS', 'Svelte', 'Cloudflare Pages']
+	},
 	'One Million Line Word Search': {
 		cover:
 			'https://raw.githubusercontent.com/tcmmichaelb139/onemillionwordsearch/refs/heads/main/assets/website.png',
@@ -48,6 +57,14 @@ export const projects: Projects = {
 		demo: 'https://onemillionwordsearch.michaelbao.io/',
 		builtWith: ['Svelte', 'TypeScript', 'Tailwind CSS', 'Cloudflare Pages', 'Python']
 	},
+	'24 Game': {
+		cover: 'https://raw.githubusercontent.com/tcmmichaelb139/24/refs/heads/main/assets/website.png',
+		description:
+			'24 game solver and generator. A simple game where you have to use 4 numbers to get 24 using basic operations.',
+		github: 'https://github.com/tcmmichaelb139/24',
+		demo: 'https://24.michaelbao.io/',
+		builtWith: ['Svelte', 'TypeScript', 'Cloudflare Pages']
+	},
 	'Particle Avoidance Simulator': {
 		cover:
 			'https://raw.githubusercontent.com/tcmmichaelb139/particle-avoidance/refs/heads/main/assets/torus.png',
@@ -56,14 +73,6 @@ export const projects: Projects = {
 		github: 'https://github.com/tcmmichaelb139/particle-avoidance',
 		demo: 'https://avoid-particles.michaelbao.io/',
 		builtWith: ['three.js', 'TypeScript', 'Svelte', 'Cloudflare Pages']
-	},
-	'24 Game': {
-		cover: 'https://raw.githubusercontent.com/tcmmichaelb139/24/refs/heads/main/assets/website.png',
-		description:
-			'24 game solver and generator. A simple game where you have to use 4 numbers to get 24 using basic operations.',
-		github: 'https://github.com/tcmmichaelb139/24',
-		demo: 'https://24.michaelbao.io/',
-		builtWith: ['Svelte', 'TypeScript', 'Cloudflare Pages']
 	},
 	'Grid Art': {
 		cover:
