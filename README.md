@@ -1,6 +1,6 @@
 # Personal Website
 
-![](website.png)
+![](assets/website.png)
 
 Built with Svelte and Tailwind CSS. Hosted on Cloudflare Pages. Icons from https://remixicon.com/
 
