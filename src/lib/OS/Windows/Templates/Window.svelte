@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { scale } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 
 	import { options, opened } from '$lib/state.svelte';
 
@@ -75,7 +75,7 @@
 			? 'opacity-100'
 			: 'opacity-75'}"
 		style="left: {moving.posX}px; top: {moving.posY}px; z-index: {opened[appName]}"
-		transition:scale={{ duration: 300 }}
+		transition:fade={{ duration: 300 }}
 	>
 		<div
 			class="flex h-full max-h-[70vh] w-full flex-col overflow-clip rounded-md bg-bg md:max-h-[80vh]"
