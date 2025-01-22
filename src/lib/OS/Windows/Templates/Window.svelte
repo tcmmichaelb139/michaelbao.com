@@ -19,8 +19,9 @@
 
 	onMount(() => {
 		initialMount = true;
-		defaultPosX = Math.max(window.innerWidth / 2 - 338, 0);
-		defaultPosY = window.innerHeight / 8;
+		const loc = Object.keys(opened).indexOf(appName);
+		defaultPosX = Math.max(window.innerWidth / 2 - 338, 0) + loc * 10;
+		defaultPosY = window.innerHeight / 8 + loc * 10;
 		moving.originalPosX = defaultPosX;
 		moving.originalPosY = defaultPosY;
 		moving.posX = defaultPosX;
