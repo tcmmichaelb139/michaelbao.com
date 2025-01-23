@@ -22,11 +22,20 @@
 		opened[appName] = options.zIndex++;
 	}
 
-	function onWindowDrag(event: Event) {
+	function onWindowDrag(event: MouseEvent) {
 		event.preventDefault();
 
-		moving.originalPosX = (event as MouseEvent).clientX;
-		moving.originalPosY = (event as MouseEvent).clientY;
+		moving.originalPosX = event.clientX;
+		moving.originalPosY = event.clientY;
+
+		moving.moving = true;
+
+		windowOnTop();
+	}
+
+	function onTouchStart(event: TouchEvent) {
+		moving.originalPosX = event.touches[0].clientX;
+		moving.originalPosY = event.touches[0].clientY;
 
 		moving.moving = true;
 
@@ -37,15 +46,25 @@
 		moving.moving = false;
 	}
 
-	function onMouseMove(event: Event) {
+	function onMouseMove(event: MouseEvent) {
 		event.preventDefault();
 
 		if (moving.moving) {
-			moving.posX += (event as MouseEvent).clientX - moving.originalPosX;
-			moving.posY += (event as MouseEvent).clientY - moving.originalPosY;
+			moving.posX += event.clientX - moving.originalPosX;
+			moving.posY += event.clientY - moving.originalPosY;
 
-			moving.originalPosX = (event as MouseEvent).clientX;
-			moving.originalPosY = (event as MouseEvent).clientY;
+			moving.originalPosX = event.clientX;
+			moving.originalPosY = event.clientY;
+		}
+	}
+
+	function onTouchMove(event: TouchEvent) {
+		if (moving.moving) {
+			moving.posX += event.touches[0].clientX - moving.originalPosX;
+			moving.posY += event.touches[0].clientY - moving.originalPosY;
+
+			moving.originalPosX = event.touches[0].clientX;
+			moving.originalPosY = event.touches[0].clientY;
 		}
 	}
 
@@ -91,8 +110,12 @@
 			class="flex h-full max-h-[70vh] w-full flex-col overflow-clip rounded-md bg-bg md:max-h-[80vh]"
 		>
 			<div class="flex h-full items-center bg-bg-alt px-1 py-2 text-orange">
-				<button class="w-full cursor-move px-2 py-1 text-left" onmousedown={onWindowDrag}
-					>{appName}
+				<button
+					class="w-full cursor-move px-2 py-1 text-left"
+					onmousedown={onWindowDrag}
+					ontouchstart={onTouchStart}
+				>
+					{appName}
 				</button>
 				<button
 					class=" m-1 w-6 text-red transition-all hover:brightness-125"
@@ -110,6 +133,7 @@
 				class="prose prose-sm prose-tokyonight max-w-2xl overflow-auto overflow-x-clip p-4"
 				style="width: {window.innerWidth - 4}px"
 				onmousedown={windowOnTop}
+				ontouchstart={windowOnTop}
 				role="button"
 				tabindex="0"
 			>
@@ -124,4 +148,9 @@
 	{@render children()}
 </div>
 
-<svelte:window onmouseup={onMouseUp} onmousemove={onMouseMove} />
+<svelte:window
+	onmouseup={onMouseUp}
+	ontouchend={onMouseUp}
+	onmousemove={onMouseMove}
+	ontouchmove={onTouchMove}
+/>

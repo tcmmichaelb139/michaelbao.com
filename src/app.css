@@ -9,6 +9,7 @@ html,
 	font-family: 'JetBrains Mono', monospace;
 	height: 100%;
 	width: 100%;
+	overflow: clip;
 }
 
 body {
