@@ -3,7 +3,7 @@
 
 	export let title = 'Home | Michael Bao';
 	export let description = 'Michael Bao is a student interested in everything technology.';
-	// export let image = 'https://michaelbao.io/og.png';
+	export let image = 'https://michaelbao.io/pfp.png';
 </script>
 
 <svelte:head>
@@ -14,18 +14,18 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
-	<!-- <meta property="og:image" content={image} /> -->
+	<meta property="og:image" content={image} />
 
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="twitter:domain" content="michaelbao.io" />
 	<meta property="twitter:url" content="https://michaelbao.io{$page.url.pathname.toString()}" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
-	<!-- <meta name="twitter:image" content={image} /> -->
+	<meta name="twitter:image" content={image} />
 	{@html `  <script type="application/ld+json">{
      "@context": "https://schema.org",
      "@type": "Website",
      "name": "${title} | Michael Bao",
-     "url": "https//michaelbao.io${$page.url.pathname}"}</script>`}
-	<!-- "logo": ${image}   -->
+     "url": "https//michaelbao.io${$page.url.pathname}"}
+	"logo": ${image} </script>`}
 </svelte:head>

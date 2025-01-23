@@ -7,9 +7,9 @@
 <SEO title="Projects" />
 
 <main
-	class="h-full w-full overflow-auto bg-bg/85 px-5 py-12 text-fg backdrop-blur-xl md:px-12 md:py-16"
+	class="flex h-full w-full justify-center overflow-auto bg-bg/75 px-5 text-fg backdrop-blur-xl md:px-12"
 >
-	<div class="mx-auto w-fit p-2">
+	<div class="h-full px-2 py-12 md:py-16">
 		<a
 			class="group mb-2 inline-flex items-center text-sm font-bold leading-tight text-cyan transition-all"
 			href="/"
@@ -28,9 +28,9 @@
 		<h1 class="text-4xl font-bold text-fg">Projects</h1>
 
 		<table class="mt-10 text-left">
-			<thead class="sticky top-0 z-10 border-b border-gray/25 px-6 py-5 text-sm">
-				<tr>
-					<th class="py-4 pr-8">Project</th>
+			<thead class="sticky top-0 z-10 border-b border-gray/25 bg-bg/50 text-sm backdrop-blur-sm">
+				<tr class="bg-bg/50 px-6 py-5 backdrop-blur-sm">
+					<th class="py-4 pl-8 pr-8">Project</th>
 					<th class="hidden py-4 pr-8 sm:inline-flex">Built with</th>
 					<th class="py-4 pr-8">Link</th>
 				</tr>
@@ -38,7 +38,7 @@
 			{#each Object.keys(projects) as project}
 				<tbody>
 					<tr class="border-b border-gray/30">
-						<td class="py-4 pr-8 align-top font-semibold leading-snug">
+						<td class="py-4 pl-8 pr-8 align-top font-semibold leading-snug">
 							{project}
 						</td>
 						<td class="hidden py-4 pr-8 align-top font-normal leading-snug sm:inline-flex">
