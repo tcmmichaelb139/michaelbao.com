@@ -87,13 +87,16 @@
 
 		const zIndex = opened[appName];
 		const isFocus = options.focusApp === appName;
-		setTimeout(() => {
-			windowOnTop();
-			setTimeout(() => {
-				opened[appName] = zIndex;
-				if (isFocus) options.focusApp = appName;
-			}, splashTime / 3);
-		}, splashTime / 2);
+		setTimeout(
+			() => {
+				windowOnTop();
+				setTimeout(() => {
+					opened[appName] = zIndex;
+					if (isFocus) options.focusApp = appName;
+				}, splashTime / 4);
+			},
+			(splashTime * 2) / 3
+		);
 	});
 </script>
 
@@ -109,7 +112,7 @@
 		<div
 			class="flex h-full max-h-[70vh] w-full flex-col overflow-clip rounded-md bg-bg md:max-h-[80vh]"
 		>
-			<div class="flex h-full items-center bg-bg-alt px-1 py-2 text-orange">
+			<div class="flex h-full items-center bg-bg-alt p-1 text-orange">
 				<button
 					class="w-full cursor-move px-2 py-1 text-left"
 					onmousedown={onWindowDrag}

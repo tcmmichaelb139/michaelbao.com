@@ -1,4 +1,4 @@
-export const splashTime = 2000;
+export const splashTime = 1500;
 
 export const options = $state({
 	workspace: 1,

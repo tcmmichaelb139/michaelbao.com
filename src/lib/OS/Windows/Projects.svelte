@@ -37,6 +37,7 @@
 					src={projects[project].cover}
 					alt={project}
 					class="aspect-auto shadow-sm shadow-gray sm:m-1.5 sm:w-52"
+					fetchpriority="high"
 				/>
 				<div class="">
 					<div class="flex flex-row items-center gap-2">
