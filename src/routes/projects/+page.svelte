@@ -2,6 +2,8 @@
 	import SEO from '$lib/misc/SEO.svelte';
 
 	import { projects } from '$lib/state.svelte';
+
+	const projectList = Object.keys(projects).sort((a, b) => projects[b].year - projects[a].year);
 </script>
 
 <SEO title="Projects" />
@@ -27,18 +29,22 @@
 		</a>
 		<h1 class="text-4xl font-bold text-fg">Projects</h1>
 
-		<table class="mt-10 text-left">
-			<thead class="sticky top-0 z-10 border-b border-gray/25 bg-bg/50 text-sm backdrop-blur-sm">
-				<tr class="bg-bg/50 px-6 py-5 backdrop-blur-sm">
-					<th class="py-4 pl-8 pr-8">Project</th>
+		<table class="mt-10 bg-bg/50 text-left backdrop-blur-sm">
+			<thead class="sticky top-0 z-10 border-b border-gray/25 bg-bg/85 text-sm backdrop-blur-sm">
+				<tr class="px-6 py-5 backdrop-blur-sm">
+					<th class="py-4 pl-8 pr-8">Year</th>
+					<th class="py-4 pr-8">Project</th>
 					<th class="hidden py-4 pr-8 sm:inline-flex">Built with</th>
 					<th class="py-4 pr-8">Link</th>
 				</tr>
 			</thead>
-			{#each Object.keys(projects) as project}
+			{#each projectList as project}
 				<tbody>
 					<tr class="border-b border-gray/30">
 						<td class="py-4 pl-8 pr-8 align-top font-semibold leading-snug">
+							{projects[project].year}
+						</td>
+						<td class="py-4 pr-8 align-top font-semibold leading-snug">
 							{project}
 						</td>
 						<td class="hidden py-4 pr-8 align-top font-normal leading-snug sm:inline-flex">

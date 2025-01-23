@@ -19,6 +19,7 @@ interface Projects {
 		github: string;
 		demo: string;
 		builtWith: string[];
+		year: number;
 	};
 }
 
@@ -30,7 +31,8 @@ export const projects: Projects = {
 			'A tokyonight theme for Obsidian. Colors from tokyonight.nvim and VSCode Tokyonight.',
 		github: 'https://github.com/tcmmichaelb139/obsidian-tokyonight',
 		demo: '',
-		builtWith: ['CSS', 'Obsidian']
+		builtWith: ['CSS', 'Obsidian'],
+		year: 2023
 	},
 	'.dotfiles': {
 		cover:
@@ -39,7 +41,8 @@ export const projects: Projects = {
 			'Personal dotfiles managed with stow. Include configurations for various applications.',
 		github: 'https://github.com/tcmmichaelb139/.dotfiles',
 		demo: '',
-		builtWith: ['Lua', 'Bash', 'Toml', 'ZSH', 'Python']
+		builtWith: ['Lua', 'Bash', 'Toml', 'ZSH', 'Python'],
+		year: 2021
 	},
 	VectorBoids: {
 		cover:
@@ -48,7 +51,8 @@ export const projects: Projects = {
 			'Boids with vector fields. Uses the algorithm created by Craig Reynolds with the addition of vector fields.',
 		github: 'https://github.com/tcmmichaelb139/VectorBoids',
 		demo: 'https://vectorboids.michaelbao.io/',
-		builtWith: ['HTML Canvas', 'TypeScript', 'Tailwind CSS', 'Svelte', 'Cloudflare Pages']
+		builtWith: ['HTML Canvas', 'TypeScript', 'Tailwind CSS', 'Svelte', 'Cloudflare Pages'],
+		year: 2025
 	},
 	'One Million Line Word Search': {
 		cover:
@@ -57,7 +61,8 @@ export const projects: Projects = {
 			"A word search game with a million lines of words. The game has three line modes: 25, 100, and 100,000 (and yes it's not a million but close enough). The game is the same for everyone, so finding a word will show up for everyone.",
 		github: 'https://github.com/tcmmichaelb139/onemillionwordsearch',
 		demo: 'https://onemillionwordsearch.michaelbao.io/',
-		builtWith: ['Svelte', 'TypeScript', 'Tailwind CSS', 'Cloudflare Pages', 'Python']
+		builtWith: ['Svelte', 'TypeScript', 'Tailwind CSS', 'Cloudflare Pages', 'Python'],
+		year: 2024
 	},
 	'24 Game': {
 		cover: 'https://raw.githubusercontent.com/tcmmichaelb139/24/refs/heads/main/assets/website.png',
@@ -65,7 +70,8 @@ export const projects: Projects = {
 			'24 game solver and generator. A simple game where you have to use 4 numbers to get 24 using basic operations.',
 		github: 'https://github.com/tcmmichaelb139/24',
 		demo: 'https://24.michaelbao.io/',
-		builtWith: ['Svelte', 'TypeScript', 'Cloudflare Pages']
+		builtWith: ['Svelte', 'TypeScript', 'Cloudflare Pages'],
+		year: 2022
 	},
 	'Particle Avoidance Simulator': {
 		cover:
@@ -74,7 +80,8 @@ export const projects: Projects = {
 			'A simple particle simulator for various objects including spheres and cubes where the particles avoid the mouse based on certain parameters.',
 		github: 'https://github.com/tcmmichaelb139/particle-avoidance',
 		demo: 'https://avoid-particles.michaelbao.io/',
-		builtWith: ['three.js', 'TypeScript', 'Svelte', 'Cloudflare Pages']
+		builtWith: ['three.js', 'TypeScript', 'Svelte', 'Cloudflare Pages'],
+		year: 2024
 	},
 	'Grid Art': {
 		cover:
@@ -82,14 +89,16 @@ export const projects: Projects = {
 		description: 'Creating art with grids. ',
 		github: 'https://github.com/tcmmichaelb139/Grid-Art',
 		demo: 'https://grid-art.michaelbao.io/',
-		builtWith: ['HTML', 'CSS', 'Javascript']
+		builtWith: ['HTML', 'CSS', 'Javascript'],
+		year: 2022
 	},
 	'Competitive Programming Solutions': {
 		cover: '',
 		description: 'My solutions to various competitive programming problems.',
 		github: 'https://github.com/tcmmichaelb139/Competitive-Programming',
 		demo: '',
-		builtWith: ['C++', 'Python']
+		builtWith: ['C++', 'Python'],
+		year: 2021
 	},
 	CFBot: {
 		cover:
@@ -97,13 +106,42 @@ export const projects: Projects = {
 		description: 'Codeforces bot for visualizing stats',
 		github: 'https://github.com/tcmmichaelb139/cfbot',
 		demo: 'https://cfbot.michaelbao.io/',
-		builtWith: ['React', 'D3.js', 'Chart.js', 'Tailwind CSS']
+		builtWith: ['React', 'D3.js', 'Chart.js', 'Tailwind CSS', 'Codeforces API'],
+		year: 2022
 	},
 	MBCP: {
 		cover: '',
 		description: 'Competitive programming stress testing tool',
 		github: 'https://github.com/tcmmichaelb139/mbcp',
 		demo: '',
-		builtWith: ['Python']
+		builtWith: ['Python'],
+		year: 2023
+	},
+	'Style Transfer Mural Generator': {
+		cover:
+			'https://raw.githubusercontent.com/tcmmichaelb139/style-transfer-mural-generator/refs/heads/main/assets/example.png',
+		description:
+			'A mural generator using style transfer. Upload an image and select the styles to apply to the image. The app will generate a mural using the style transfer technique.',
+		github: 'https://github.com/tcmmichaelb139/style-transfer-mural-generator',
+		demo: 'https://huggingface.co/spaces/tcmmichaelb139/style-transfer-mural-generator',
+		builtWith: ['Python', 'Gradio', 'Hugging Face'],
+		year: 2024
+	},
+	'Word Censorer': {
+		cover:
+			'https://raw.githubusercontent.com/tcmmichaelb139/word-censorer/refs/heads/main/assets/website.png',
+		description: 'A simple word censorer that allows frequency and custom audio.',
+		github: 'https://github.com/tcmmichaelb139/word-censorer',
+		demo: 'https://huggingface.co/spaces/tcmmichaelb139/word-censorer',
+		builtWith: ['OpenAI Whisper ', 'Python', 'Gradio', 'Hugging Face'],
+		year: 2025
+	},
+	'michaelbao.io': {
+		cover: '',
+		description: 'My personal website.',
+		github: 'https://github.com/tcmmichaelb139/michaelbao.io',
+		demo: 'https://michaelbao.io/',
+		builtWith: ['Svelte', 'Tailwind CSS', 'Cloudflare Pages'],
+		year: 2024
 	}
 };
