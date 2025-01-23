@@ -93,7 +93,7 @@
 				setTimeout(() => {
 					opened[appName] = zIndex;
 					if (isFocus) options.focusApp = appName;
-				}, splashTime / 4);
+				}, splashTime / 5);
 			},
 			(splashTime * 2) / 3
 		);
