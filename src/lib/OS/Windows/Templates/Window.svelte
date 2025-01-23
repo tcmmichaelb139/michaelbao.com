@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 
-	import { options, opened } from '$lib/state.svelte';
+	import { options, opened, splashTime } from '$lib/state.svelte';
 
 	const { children, appName } = $props();
 
@@ -15,17 +15,6 @@
 		originalPosY: 0,
 		posX: 0,
 		posY: 0
-	});
-
-	onMount(() => {
-		initialMount = true;
-		const loc = Object.keys(opened).indexOf(appName);
-		defaultPosX = Math.max(window.innerWidth / 2 - 338, 0) + loc * 10;
-		defaultPosY = window.innerHeight / 8 + loc * 10;
-		moving.originalPosX = defaultPosX;
-		moving.originalPosY = defaultPosY;
-		moving.posX = defaultPosX;
-		moving.posY = defaultPosY;
 	});
 
 	function windowOnTop() {
@@ -66,6 +55,27 @@
 		if (result[1] == -1) options.focusApp = '';
 		else options.focusApp = result[0];
 	}
+
+	onMount(() => {
+		initialMount = true;
+		const loc = Object.keys(opened).indexOf(appName);
+		defaultPosX = Math.max(window.innerWidth / 2 - 338, 0) + loc * 10;
+		defaultPosY = window.innerHeight / 8 + loc * 10;
+		moving.originalPosX = defaultPosX;
+		moving.originalPosY = defaultPosY;
+		moving.posX = defaultPosX;
+		moving.posY = defaultPosY;
+
+		const zIndex = opened[appName];
+		const isFocus = options.focusApp === appName;
+		setTimeout(() => {
+			windowOnTop();
+			setTimeout(() => {
+				opened[appName] = zIndex;
+				if (isFocus) options.focusApp = appName;
+			}, splashTime / 3);
+		}, splashTime / 2);
+	});
 </script>
 
 {#if initialMount && opened[appName] !== -1}

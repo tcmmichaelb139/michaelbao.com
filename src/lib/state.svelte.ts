@@ -1,3 +1,5 @@
+export const splashTime = 2000;
+
 export const options = $state({
 	workspace: 1,
 	focusApp: 'About Me',
