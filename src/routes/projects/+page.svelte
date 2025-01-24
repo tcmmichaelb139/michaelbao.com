@@ -8,7 +8,9 @@
 
 <SEO title="Projects" />
 
-<main class="flex h-full w-full justify-center overflow-auto bg-bg/75 px-5 text-fg md:px-12">
+<main
+	class="flex h-full w-full justify-center overflow-auto bg-bg/75 px-5 text-fg backdrop-blur-sm md:px-12"
+>
 	<div class="h-full px-2 py-12 md:py-16">
 		<a
 			class="group mb-2 inline-flex items-center text-sm font-bold leading-tight text-cyan transition-all"
