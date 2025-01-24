@@ -95,7 +95,7 @@
 					if (isFocus) options.focusApp = appName;
 				}, splashTime / 5);
 			},
-			(splashTime * 2) / 3
+			(splashTime * 3) / 5
 		);
 	});
 </script>
