@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 
-	import { options, opened, position, splashTime } from '$lib/state.svelte';
+	import { options, opened, position, splash } from '$lib/state.svelte';
 
 	const { children, appName } = $props();
 
@@ -99,28 +99,34 @@
 
 		const zIndex = opened[appName];
 		const isFocus = options.focusApp === appName;
-		setTimeout(
-			() => {
-				windowOnTop();
-				setTimeout(() => {
-					opened[appName] = zIndex;
-					if (isFocus) options.focusApp = appName;
-				}, splashTime / 5);
-			},
-			(splashTime * 3) / 5
-		);
+
+		if (splash.show) {
+			windowOnTop();
+			setTimeout(() => {
+				opened[appName] = zIndex;
+				if (isFocus) options.focusApp = appName;
+				splash.show = false;
+			}, splash.time);
+		}
 	});
 </script>
 
 {#if initialMount && opened[appName] !== -1}
 	<div
-		class="absolute inline-block overflow-clip rounded-lg bg-gradient-to-r from-orange to-purple p-0.5 transition-opacity {options.focusApp ===
-		appName
-			? 'opacity-100'
-			: 'opacity-75'}"
+		class="absolute inline-block overflow-clip rounded-lg p-0.5 {options.focusApp === appName
+			? 'bg-gradient-to-r from-orange to-purple'
+			: 'bg-gray/50 backdrop-blur-md'}"
 		style="left: {moving.posX}px; top: {moving.posY}px; z-index: {opened[appName]}"
-		transition:fade={{ duration: 300 }}
+		transition:fade={{ duration: 150 }}
 	>
+		{#if options.focusApp !== appName}
+			<button
+				onclick={windowOnTop}
+				class="absolute inset-0 rounded-lg bg-bg/25"
+				aria-label="Window Cover"
+				transition:fade={{ duration: 150 }}
+			></button>
+		{/if}
 		<div
 			class="flex h-full max-h-[70vh] w-full flex-col overflow-clip rounded-md bg-bg md:max-h-[80vh]"
 		>
@@ -133,7 +139,7 @@
 					{appName}
 				</button>
 				<button
-					class=" m-1 w-6 text-red transition-all hover:brightness-125"
+					class="m-1 w-6 text-red transition-all hover:brightness-125"
 					onmousedown={closeWindow}
 					aria-label="Window close"
 				>
@@ -147,8 +153,6 @@
 			<section
 				class="prose prose-sm prose-tokyonight max-w-2xl overflow-auto overflow-x-clip p-4"
 				style="width: {window.innerWidth - 4}px"
-				onmousedown={windowOnTop}
-				ontouchstart={windowOnTop}
 				role="button"
 				tabindex="0"
 			>

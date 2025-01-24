@@ -3,7 +3,9 @@
 	import RightBar from '$lib/OS/Bar/RightBar.svelte';
 </script>
 
-<nav class="flex h-11 w-full justify-between gap-2 bg-bg-alt/50 px-2 text-sm shadow-md">
+<nav
+	class="flex h-11 w-full justify-between gap-2 bg-bg-alt/50 px-2 text-sm shadow-md backdrop-blur-sm"
+>
 	<LeftBar />
 
 	<RightBar />

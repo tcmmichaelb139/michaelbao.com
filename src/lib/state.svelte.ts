@@ -1,4 +1,7 @@
-export const splashTime = 1500;
+export const splash = $state({
+	show: true,
+	time: 1500
+});
 
 export const options = $state({
 	workspace: 1,

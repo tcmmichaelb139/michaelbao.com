@@ -16,8 +16,8 @@
 	});
 </script>
 
-<div class="h-full w-full bg-background-image bg-cover">
-	<div class="h-full w-full backdrop-blur-lg">
+<div class="bg-wallpaper h-full w-full bg-cover">
+	<div class="h-full w-full">
 		{@render children()}
 	</div>
 </div>

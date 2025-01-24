@@ -8,9 +8,7 @@
 
 <SEO title="Projects" />
 
-<main
-	class="flex h-full w-full justify-center overflow-auto bg-bg/75 px-5 text-fg backdrop-blur-xl md:px-12"
->
+<main class="flex h-full w-full justify-center overflow-auto bg-bg/75 px-5 text-fg md:px-12">
 	<div class="h-full px-2 py-12 md:py-16">
 		<a
 			class="group mb-2 inline-flex items-center text-sm font-bold leading-tight text-cyan transition-all"
@@ -29,9 +27,9 @@
 		</a>
 		<h1 class="text-4xl font-bold text-fg">Projects</h1>
 
-		<table class="mt-10 bg-bg/50 text-left backdrop-blur-sm">
-			<thead class="sticky top-0 z-10 border-b border-gray/25 bg-bg/85 text-sm backdrop-blur-sm">
-				<tr class="px-6 py-5 backdrop-blur-sm">
+		<table class="mt-10 bg-bg text-left backdrop-blur-lg">
+			<thead class="sticky top-0 z-10 border-b border-gray/30 bg-bg/75 text-sm backdrop-blur-sm">
+				<tr class="px-6 py-5">
 					<th class="py-4 pl-8 pr-8">Year</th>
 					<th class="py-4 pr-8">Project</th>
 					<th class="hidden py-4 pr-8 sm:inline-flex">Built with</th>
