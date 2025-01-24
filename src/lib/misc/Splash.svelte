@@ -1,15 +1,9 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
-	import { splashTime } from '$lib/state.svelte';
-
-	let { showSplash = $bindable() } = $props();
-
-	setTimeout(() => {
-		showSplash = false;
-	}, splashTime);
+	import { splash } from '$lib/state.svelte';
 </script>
 
-{#if showSplash}
+{#if splash.show}
 	<main class="absolute z-[9999] h-full w-full bg-bg" transition:fade={{ duration: 250 }}>
 		<div
 			class="absolute left-1/2 top-1/2 w-72 -translate-x-1/2 -translate-y-1/2 transform bg-bg sm:w-96"

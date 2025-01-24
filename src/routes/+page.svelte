@@ -8,24 +8,11 @@
 	import AboutMe from '$lib/OS/Windows/AboutMe.svelte';
 	import Projects from '$lib/OS/Windows/Projects.svelte';
 	import WhatIsThis from '$lib/OS/Windows/WhatIsThis.svelte';
-	import { onMount } from 'svelte';
-
-	let showSplash = $state(true);
-
-	onMount(() => {
-		const previousUrl = document.referrer;
-		console.log(previousUrl);
-		const currentUrl = document.URL;
-
-		if (previousUrl.includes(currentUrl)) {
-			showSplash = false;
-		}
-	});
 </script>
 
 <SEO />
 
-<Splash bind:showSplash />
+<Splash />
 
 <div class="h-full w-full overflow-clip">
 	<Bar />

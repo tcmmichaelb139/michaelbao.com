@@ -22,7 +22,7 @@ export default {
 		},
 		extend: {
 			backgroundImage: {
-				'background-image': 'url("/background.svg")'
+				wallpaper: "url('/wallpaper.png')"
 			},
 			typography: ({ theme }) => ({
 				tokyonight: {

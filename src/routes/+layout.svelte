@@ -16,8 +16,9 @@
 	});
 </script>
 
-<div class="h-full w-full bg-background-image bg-cover">
-	<div class="h-full w-full backdrop-blur-lg">
+<div class="h-full w-full bg-wallpaper bg-cover">
+	<!-- idk how but backdrop-blur-0 clips the window which is good -->
+	<div class="h-full w-full backdrop-blur-0">
 		{@render children()}
 	</div>
 </div>
