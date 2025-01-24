@@ -41,7 +41,7 @@
 			{#each projectList as project}
 				<tbody>
 					<tr class="border-b border-gray/30">
-						<td class="py-4 pl-8 pr-8 align-top font-semibold leading-snug">
+						<td class="py-4 pl-8 pr-8 align-top font-light leading-snug text-gray">
 							{projects[project].year}
 						</td>
 						<td class="py-4 pr-8 align-top font-semibold leading-snug">
@@ -58,19 +58,20 @@
 							</div>
 						</td>
 						<td class="py-4 pr-8 align-top font-semibold leading-snug">
+							{#if projects[project].github}
+								<a
+									class="items-baseline text-sm leading-tight text-gray transition-all hover:text-cyan focus-visible:text-cyan"
+									href={projects[project].github}
+									target="_blank"
+									rel="noopener noreferrer">GitHub</a
+								>
+							{/if}
 							{#if projects[project].demo}
 								<a
 									class="items-baseline text-sm leading-tight text-gray transition-all hover:text-cyan focus-visible:text-cyan"
 									href={projects[project].demo}
 									target="_blank"
 									rel="noopener noreferrer">Demo</a
-								>
-							{:else}
-								<a
-									class="items-baseline text-sm leading-tight text-gray transition-all hover:text-cyan focus-visible:text-cyan"
-									href={projects[project].github}
-									target="_blank"
-									rel="noopener noreferrer">GitHub</a
 								>
 							{/if}
 						</td>
