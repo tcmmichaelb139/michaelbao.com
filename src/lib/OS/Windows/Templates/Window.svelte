@@ -3,6 +3,7 @@
 	import { fade } from 'svelte/transition';
 
 	import { options, opened, position, splash } from '$lib/state.svelte';
+	import Showdown from 'showdown';
 
 	const { children, appName } = $props();
 
@@ -99,14 +100,19 @@
 
 		const zIndex = opened[appName];
 		const isFocus = options.focusApp === appName;
-
 		if (splash.show) {
 			windowOnTop();
-			setTimeout(() => {
-				opened[appName] = zIndex;
-				if (isFocus) options.focusApp = appName;
-				splash.show = false;
-			}, splash.time);
+			setTimeout(
+				() => {
+					opened[appName] = zIndex;
+					if (isFocus) options.focusApp = appName;
+
+					setTimeout(() => {
+						splash.show = false;
+					}, splash.time / 3);
+				},
+				(splash.time * 2) / 3
+			);
 		}
 	});
 </script>

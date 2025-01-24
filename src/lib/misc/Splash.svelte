@@ -1,10 +1,6 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import { splash } from '$lib/state.svelte';
-
-	setTimeout(() => {
-		splash.show = false;
-	}, splash.time);
 </script>
 
 {#if splash.show}
