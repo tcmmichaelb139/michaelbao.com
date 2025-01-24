@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 
-	import { options, opened, splashTime } from '$lib/state.svelte';
+	import { options, opened, position, splashTime } from '$lib/state.svelte';
 
 	const { children, appName } = $props();
 
@@ -44,6 +44,8 @@
 
 	function onMouseUp() {
 		moving.moving = false;
+
+		position[appName] = { x: moving.posX, y: moving.posY };
 	}
 
 	function onMouseMove(event: MouseEvent) {
@@ -80,10 +82,20 @@
 		const loc = Object.keys(opened).indexOf(appName);
 		defaultPosX = Math.max(window.innerWidth / 2 - 338, 0) + loc * 10;
 		defaultPosY = window.innerHeight / 8 + loc * 10;
-		moving.originalPosX = defaultPosX;
-		moving.originalPosY = defaultPosY;
-		moving.posX = defaultPosX;
-		moving.posY = defaultPosY;
+
+		if (position[appName] === undefined) {
+			position[appName] = { x: defaultPosX, y: defaultPosY };
+
+			moving.originalPosX = defaultPosX;
+			moving.originalPosY = defaultPosY;
+			moving.posX = defaultPosX;
+			moving.posY = defaultPosY;
+		} else {
+			moving.originalPosX = position[appName].x;
+			moving.originalPosY = position[appName].y;
+			moving.posX = position[appName].x;
+			moving.posY = position[appName].y;
+		}
 
 		const zIndex = opened[appName];
 		const isFocus = options.focusApp === appName;

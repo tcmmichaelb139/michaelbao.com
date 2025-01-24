@@ -12,6 +12,8 @@ export const opened: { [key: string]: number } = $state({
 	'What Is This?': -1
 });
 
+export const position: { [key: string]: { x: number; y: number } } = $state({});
+
 interface Projects {
 	[key: string]: {
 		cover: string;
