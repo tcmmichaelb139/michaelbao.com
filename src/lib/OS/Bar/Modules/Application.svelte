@@ -7,8 +7,8 @@
 <div class="text-fg">
 	<Boundary>
 		<div>
-			{#if options.focusApp != ''}
-				{options.focusApp}
+			{#if options.focusApp[options.workspace] != ''}
+				{options.focusApp[options.workspace]}
 			{:else}
 				Open an App
 			{/if}

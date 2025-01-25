@@ -4,7 +4,7 @@
 </script>
 
 <nav
-	class="flex h-11 w-full justify-between gap-2 bg-bg-alt/50 px-2 text-sm shadow-md backdrop-blur-sm"
+	class="flex h-11 w-full justify-between gap-2 bg-bg-alt/75 px-2 text-sm shadow-md backdrop-blur-lg"
 >
 	<LeftBar />
 

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Window from '$lib/OS/Windows/Templates/Window.svelte';
-	import Markdown from '$lib/OS/Windows/Templates/Markdown.svelte';
+	import Markdown from '$lib/misc/Markdown.svelte';
 
 	import AboutMe from '$lib/content/AboutMe.md?raw';
 </script>

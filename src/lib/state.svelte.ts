@@ -1,21 +1,23 @@
 export const splash = $state({
 	show: true,
-	time: 1500
+	time: 1000
 });
 
 export const options = $state({
-	workspace: 1,
-	focusApp: 'About Me',
+	workspace: 0,
+	focusApp: ['About Me'],
 	zIndex: 10
 });
 
-export const opened: { [key: string]: number } = $state({
-	'About Me': 1,
-	Projects: -1,
-	'What Is This?': -1
-});
+export const opened: { [key: string]: number }[] = $state([
+	{
+		'About Me': 1,
+		Projects: -1,
+		'What Is This?': -1
+	}
+]);
 
-export const position: { [key: string]: { x: number; y: number } } = $state({});
+export const position: { [key: string]: { x: number; y: number } }[] = $state([{}]);
 
 interface Projects {
 	[key: string]: {
@@ -30,8 +32,7 @@ interface Projects {
 
 export const projects: Projects = {
 	'Obsidian Tokyo Night Theme': {
-		cover:
-			'https://raw.githubusercontent.com/tcmmichaelb139/obsidian-tokyonight/refs/heads/main/tokyonight.png',
+		cover: '/projects/tokyonight.png',
 		description:
 			'A tokyonight theme for Obsidian. Colors from tokyonight.nvim and VSCode Tokyonight.',
 		github: 'https://github.com/tcmmichaelb139/obsidian-tokyonight',
@@ -40,8 +41,7 @@ export const projects: Projects = {
 		year: 2023
 	},
 	'.dotfiles': {
-		cover:
-			'https://raw.githubusercontent.com/tcmmichaelb139/.dotfiles/refs/heads/main/assets/desktop-full.png',
+		cover: '/projects/dotfiles.png',
 		description:
 			'Personal dotfiles managed with stow. Include configurations for various applications.',
 		github: 'https://github.com/tcmmichaelb139/.dotfiles',
@@ -50,8 +50,7 @@ export const projects: Projects = {
 		year: 2021
 	},
 	VectorBoids: {
-		cover:
-			'https://raw.githubusercontent.com/tcmmichaelb139/VectorBoids/refs/heads/main/static/website.png',
+		cover: '/projects/vectorboids.png',
 		description:
 			'Boids with vector fields. Uses the algorithm created by Craig Reynolds with the addition of vector fields.',
 		github: 'https://github.com/tcmmichaelb139/VectorBoids',
@@ -60,8 +59,7 @@ export const projects: Projects = {
 		year: 2025
 	},
 	'One Million Line Word Search': {
-		cover:
-			'https://raw.githubusercontent.com/tcmmichaelb139/onemillionwordsearch/refs/heads/main/assets/website.png',
+		cover: '/projects/onemillionwordsearch.png',
 		description:
 			"A word search game with a million lines of words. The game has three line modes: 25, 100, and 100,000 (and yes it's not a million but close enough). The game is the same for everyone, so finding a word will show up for everyone.",
 		github: 'https://github.com/tcmmichaelb139/onemillionwordsearch',
@@ -70,7 +68,7 @@ export const projects: Projects = {
 		year: 2024
 	},
 	'24 Game': {
-		cover: 'https://raw.githubusercontent.com/tcmmichaelb139/24/refs/heads/main/assets/website.png',
+		cover: '/projects/24.png',
 		description:
 			'24 game solver and generator. A simple game where you have to use 4 numbers to get 24 using basic operations.',
 		github: 'https://github.com/tcmmichaelb139/24',
