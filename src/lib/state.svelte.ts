@@ -34,7 +34,7 @@ export const projects: Projects = {
 	'Obsidian Tokyo Night Theme': {
 		cover: '/projects/tokyonight.png',
 		description:
-			'A tokyonight theme for Obsidian. Colors from tokyonight.nvim and VSCode Tokyonight.',
+			'A tokyonight theme for Obsidian. Colors from tokyonight.nvim and VSCode Tokyonight. 135,000+ downloads and 115+ GitHub stars.',
 		github: 'https://github.com/tcmmichaelb139/obsidian-tokyonight',
 		demo: '',
 		builtWith: ['CSS', 'Obsidian'],
@@ -43,7 +43,7 @@ export const projects: Projects = {
 	'.dotfiles': {
 		cover: '/projects/dotfiles.png',
 		description:
-			'Personal dotfiles managed with stow. Include configurations for various applications.',
+			'Personal dotfiles managed with stow. Include configurations for various applications. 120+ GitHub stars',
 		github: 'https://github.com/tcmmichaelb139/.dotfiles',
 		demo: '',
 		builtWith: ['Lua', 'Bash', 'Toml', 'ZSH', 'Python'],

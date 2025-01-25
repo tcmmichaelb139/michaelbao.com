@@ -20,6 +20,8 @@
 
 		if (+key >= 1 && +key <= 9) {
 			// Switch workspaces
+			e.preventDefault();
+
 			options['workspace'] = +key - 1;
 		} else if (key === 'tab') {
 			// Switch focus app
@@ -39,12 +41,18 @@
 			opened[options.workspace][options.focusApp[options.workspace]] = options.zIndex++;
 		} else if (key === 'a') {
 			// Open About Me
+			e.preventDefault();
+
 			openApp('About Me');
 		} else if (key === 'p') {
 			// Open Projects
+			e.preventDefault();
+
 			openApp('Projects');
 		} else if (key === 'h') {
 			// Open What Is This?
+			e.preventDefault();
+
 			openApp('What Is This?');
 		}
 	}
