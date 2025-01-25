@@ -1,3 +1,5 @@
+### Keybinds
+
 **1-9**: workspaces 1-9 respectively
 
 **Tab**: switches between windows
