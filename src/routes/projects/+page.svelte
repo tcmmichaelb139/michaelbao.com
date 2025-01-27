@@ -11,7 +11,7 @@
 <main
 	class="flex h-full w-full justify-center overflow-auto bg-bg/75 px-5 text-fg backdrop-blur-sm md:px-12"
 >
-	<div class="h-full px-2 py-12 md:py-16">
+	<div class="h-fit px-2 py-12 md:py-16">
 		<a
 			class="group mb-2 inline-flex items-center text-sm font-bold leading-tight text-cyan transition-all"
 			href="/"
@@ -38,9 +38,9 @@
 					<th class="py-4 pr-8">Link</th>
 				</tr>
 			</thead>
-			{#each projectList as project}
+			{#each projectList as project, i}
 				<tbody>
-					<tr class="border-b border-gray/30">
+					<tr class={i != projectList.length - 1 ? 'border-b border-gray/30' : ''}>
 						<td class="py-4 pl-8 pr-8 align-top font-light leading-snug text-gray">
 							{projects[project].year}
 						</td>
