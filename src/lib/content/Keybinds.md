@@ -4,6 +4,8 @@
 
 **Tab**: switches between windows
 
+**q**: quits focused window
+
 **a**: opens _about me_
 
 **p**: opens _projects_

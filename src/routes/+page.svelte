@@ -11,6 +11,7 @@
 
 	import { options, opened } from '$lib/state.svelte';
 	import { openApp } from '$lib/OS/Desktop/utils';
+	import { closeWindow } from '$lib/OS/Windows/utils';
 	import { initVars } from '$lib/utils';
 
 	initVars();
@@ -39,6 +40,11 @@
 			const index = windows.indexOf(options.focusApp[options.workspace]);
 			options.focusApp[options.workspace] = windows[(index + 1) % windows.length];
 			opened[options.workspace][options.focusApp[options.workspace]] = options.zIndex++;
+		} else if (key === 'q') {
+			// Close focused app
+			e.preventDefault();
+
+			closeWindow(options.focusApp[options.workspace]);
 		} else if (key === 'a') {
 			// Open About Me
 			e.preventDefault();

@@ -3,6 +3,7 @@
 	import { fade } from 'svelte/transition';
 
 	import { options, opened, position } from '$lib/state.svelte';
+	import { closeWindow } from '$lib/OS/Windows/utils';
 
 	const { children, appName } = $props();
 
@@ -80,11 +81,8 @@
 		}
 	}
 
-	function closeWindow() {
-		opened[options.workspace][appName] = -1;
-		const result = Object.entries(opened[options.workspace]).sort(([, a], [, b]) => b - a)[0];
-		if (result[1] == -1) options.focusApp[options.workspace] = '';
-		else options.focusApp[options.workspace] = result[0];
+	function exitWindow() {
+		closeWindow(appName);
 	}
 
 	onMount(() => {
@@ -145,7 +143,7 @@
 					</button>
 					<button
 						class="m-1 w-6 text-red transition-all hover:brightness-125"
-						onclick={closeWindow}
+						onclick={exitWindow}
 						aria-label="Window close"
 					>
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
