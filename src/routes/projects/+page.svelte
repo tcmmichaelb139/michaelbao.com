@@ -5,10 +5,6 @@
 	import { slide } from 'svelte/transition';
 
 	const projectList = Object.keys(projects).sort((a, b) => projects[b].year - projects[a].year);
-
-	let mouse = $state({ x: 0, y: 0 });
-
-	$inspect(mouse);
 </script>
 
 <SEO title="Projects" />
@@ -103,5 +99,3 @@
 		</table>
 	</div>
 </div>
-
-<svelte:window on:mousemove={(e) => (mouse = { x: e.clientX, y: e.clientY })} />
