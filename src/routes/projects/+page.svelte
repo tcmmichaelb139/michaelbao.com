@@ -2,13 +2,18 @@
 	import SEO from '$lib/misc/SEO.svelte';
 
 	import { projects } from '$lib/state.svelte';
+	import { slide } from 'svelte/transition';
 
 	const projectList = Object.keys(projects).sort((a, b) => projects[b].year - projects[a].year);
+
+	let mouse = $state({ x: 0, y: 0 });
+
+	$inspect(mouse);
 </script>
 
 <SEO title="Projects" />
 
-<main
+<div
 	class="flex h-full w-full justify-center overflow-auto bg-bg/75 px-5 text-fg backdrop-blur-sm md:px-12"
 >
 	<div class="h-fit px-2 py-12 md:py-16">
@@ -29,7 +34,7 @@
 		</a>
 		<h1 class="text-4xl font-bold text-fg">Projects</h1>
 
-		<table class="mt-10 bg-bg text-left backdrop-blur-lg">
+		<table class="relative mt-10 bg-bg text-left backdrop-blur-lg">
 			<thead class="sticky top-0 z-10 border-b border-gray/30 bg-bg/75 text-sm backdrop-blur-sm">
 				<tr class="px-6 py-5">
 					<th class="py-4 pl-8 pr-8">Year</th>
@@ -44,8 +49,25 @@
 						<td class="py-4 pl-8 pr-8 align-top font-light leading-snug text-gray">
 							{projects[project].year}
 						</td>
-						<td class="py-4 pr-8 align-top font-semibold leading-snug">
+						<td class="group py-4 pr-8 align-top font-semibold leading-snug">
 							{project}
+
+							<div
+								class="absolute -translate-y-9 opacity-0 transition-opacity group-hover:opacity-100"
+							>
+								<div
+									class="relative -left-16 mt-11 h-full w-64 rounded-md border-2 border-cyan bg-bg/85 p-2 text-xs text-gray backdrop-blur-lg sm:left-0"
+								>
+									<div
+										class="absolute left-1/2 top-0 w-3 -translate-x-1/2 -translate-y-full transform text-cyan sm:left-2"
+									>
+										<svg viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0 10L10 0L20 10Z" fill="currentColor" />
+										</svg>
+									</div>
+									{projects[project].description}
+								</div>
+							</div>
 						</td>
 						<td class="hidden py-4 pr-8 align-top font-normal leading-snug sm:inline-flex">
 							<div class="flex flex-wrap">
@@ -80,4 +102,6 @@
 			{/each}
 		</table>
 	</div>
-</main>
+</div>
+
+<svelte:window on:mousemove={(e) => (mouse = { x: e.clientX, y: e.clientY })} />
