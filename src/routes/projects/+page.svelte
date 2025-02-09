@@ -52,10 +52,10 @@
 								class="absolute -translate-y-9 opacity-0 transition-opacity group-hover:opacity-100"
 							>
 								<div
-									class="relative -left-16 mt-11 h-full w-64 rounded-md border-2 border-cyan bg-bg/85 p-2 text-xs text-gray backdrop-blur-lg sm:left-0"
+									class="relative -left-16 mt-11 h-full w-64 rounded-md border-2 border-gray bg-bg/85 p-2 text-xs text-gray backdrop-blur-lg sm:left-0"
 								>
 									<div
-										class="absolute left-1/2 top-0 w-3 -translate-x-1/2 -translate-y-full transform text-cyan sm:left-2"
+										class="absolute left-1/2 top-0 w-3 -translate-x-1/2 -translate-y-full transform sm:left-2"
 									>
 										<svg viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M0 10L10 0L20 10Z" fill="currentColor" />
