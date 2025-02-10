@@ -49,20 +49,16 @@
 							{project}
 
 							<div
-								class="absolute -translate-y-9 opacity-0 transition-opacity group-hover:opacity-100"
+								class="absolute left-14 mt-11 h-fit w-48 -translate-y-9 rounded-md border-2 border-gray bg-bg/85 p-2 text-xs text-gray opacity-0 backdrop-blur-lg transition-opacity group-hover:opacity-100 sm:left-24 sm:w-64"
 							>
 								<div
-									class="relative -left-16 mt-11 h-full w-64 rounded-md border-2 border-gray bg-bg/85 p-2 text-xs text-gray backdrop-blur-lg sm:left-0"
+									class="absolute left-12 top-0 w-3 -translate-x-1/2 -translate-y-full transform sm:left-2"
 								>
-									<div
-										class="absolute left-1/2 top-0 w-3 -translate-x-1/2 -translate-y-full transform sm:left-2"
-									>
-										<svg viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0 10L10 0L20 10Z" fill="currentColor" />
-										</svg>
-									</div>
-									{projects[project].description}
+									<svg viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0 10L10 0L20 10Z" fill="currentColor" />
+									</svg>
 								</div>
+								{projects[project].description}
 							</div>
 						</td>
 						<td class="hidden py-4 pr-8 align-top font-normal leading-snug sm:inline-flex">
