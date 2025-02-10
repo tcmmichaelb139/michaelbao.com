@@ -47,18 +47,22 @@
 						</td>
 						<td class="group py-4 pr-8 align-top font-semibold leading-snug">
 							{project}
-
+							<!-- This is the description-->
 							<div
-								class="absolute left-14 mt-11 h-fit w-48 -translate-y-9 rounded-md border-2 border-gray bg-bg/85 p-2 text-xs text-gray opacity-0 backdrop-blur-lg transition-opacity group-hover:opacity-100 sm:left-24 sm:w-64"
+								class="absolute h-fit w-fit -translate-x-12 -translate-y-9 opacity-0 transition-opacity group-hover:opacity-100 sm:translate-x-0"
 							>
 								<div
-									class="absolute left-12 top-0 w-3 -translate-x-1/2 -translate-y-full transform sm:left-2"
+									class="relative mt-11 h-fit w-48 rounded-md border-2 border-gray bg-bg/85 p-2 text-xs text-gray backdrop-blur-lg sm:w-64"
 								>
-									<svg viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M0 10L10 0L20 10Z" fill="currentColor" />
-									</svg>
+									<div
+										class="absolute left-1/2 top-0 w-3 -translate-x-1/2 -translate-y-full transform sm:left-2"
+									>
+										<svg viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0 10L10 0L20 10Z" fill="currentColor" />
+										</svg>
+									</div>
+									{projects[project].description}
 								</div>
-								{projects[project].description}
 							</div>
 						</td>
 						<td class="hidden py-4 pr-8 align-top font-normal leading-snug sm:inline-flex">
