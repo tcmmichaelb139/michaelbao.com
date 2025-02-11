@@ -47,7 +47,7 @@
 						</td>
 						<td class="group bg-bg py-4 pr-8 align-top font-semibold leading-snug">
 							<div
-								class="absolute -z-10 h-fit w-fit -translate-x-12 -translate-y-full opacity-0 transition-opacity group-hover:z-20 group-hover:opacity-100 sm:translate-x-0"
+								class="invisible absolute z-20 h-fit w-fit -translate-x-12 -translate-y-full opacity-0 transition-opacity delay-75 duration-200 group-hover:visible group-hover:opacity-100 sm:translate-x-0"
 							>
 								<div
 									class="relative h-fit w-48 -translate-y-2 rounded-md border-2 border-gray bg-bg/85 p-2 text-xs text-gray backdrop-blur-lg sm:w-64"
