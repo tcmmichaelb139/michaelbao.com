@@ -91,7 +91,7 @@ export const projects: Projects = {
 			'https://raw.githubusercontent.com/tcmmichaelb139/Grid-Art/refs/heads/master/assets/website.png',
 		description: 'Creating art with grids. ',
 		github: 'https://github.com/tcmmichaelb139/Grid-Art',
-		demo: 'https://grid-art.michaelbao.io/',
+		demo: 'https://grid-art.michaelbao.com/',
 		builtWith: ['HTML', 'CSS', 'Javascript'],
 		year: 2022
 	},
