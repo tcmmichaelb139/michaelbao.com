@@ -45,12 +45,12 @@
 						<td class="py-4 pl-8 pr-8 align-top font-light leading-snug text-gray">
 							{projects[project].year}
 						</td>
-						<td class="group py-4 pr-8 align-top font-semibold leading-snug">
+						<td class="group bg-bg py-4 pr-8 align-top font-semibold leading-snug">
 							<div
-								class="absolute -z-10 h-fit w-fit -translate-x-12 -translate-y-4 opacity-0 transition-opacity group-hover:z-20 group-hover:opacity-100 sm:translate-x-0"
+								class="absolute -z-10 h-fit w-fit -translate-x-12 -translate-y-full opacity-0 transition-opacity group-hover:z-20 group-hover:opacity-100 sm:translate-x-0"
 							>
 								<div
-									class="relative h-fit w-48 -translate-y-full rounded-md border-2 border-gray bg-bg/85 p-2 text-xs text-gray backdrop-blur-lg sm:w-64"
+									class="relative h-fit w-48 -translate-y-2 rounded-md border-2 border-gray bg-bg/85 p-2 text-xs text-gray backdrop-blur-lg sm:w-64"
 								>
 									<div
 										class="absolute bottom-0 left-1/2 w-3 -translate-x-1/2 translate-y-full transform sm:left-2"
