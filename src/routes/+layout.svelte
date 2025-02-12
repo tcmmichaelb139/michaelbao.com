@@ -16,7 +16,8 @@
 	});
 </script>
 
-<div class="h-full w-full bg-wallpaper bg-cover">
+<div class="h-full w-full">
+	<img src="/wallpaper.png" alt="Wallpaper" class="absolute -z-[999] object-cover" />
 	<div class="relative h-full w-full overflow-clip">
 		{@render children()}
 	</div>

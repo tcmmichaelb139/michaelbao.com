@@ -21,9 +21,6 @@ export default {
 			unknown: '#ffffff'
 		},
 		extend: {
-			backgroundImage: {
-				wallpaper: "url('/wallpaper.png')"
-			},
 			typography: ({ theme }) => ({
 				tokyonight: {
 					css: {
