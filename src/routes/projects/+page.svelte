@@ -2,7 +2,6 @@
 	import SEO from '$lib/misc/SEO.svelte';
 
 	import { projects } from '$lib/state.svelte';
-	import { slide } from 'svelte/transition';
 
 	const projectList = Object.keys(projects).sort((a, b) => projects[b].year - projects[a].year);
 </script>
