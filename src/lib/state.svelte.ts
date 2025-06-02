@@ -54,7 +54,7 @@ export const projects: Projects = {
 		description:
 			'Boids with vector fields. Uses the algorithm created by Craig Reynolds with the addition of vector fields.',
 		github: 'https://github.com/tcmmichaelb139/VectorBoids',
-		demo: 'https://vectorboids.michaelbao.io/',
+		demo: 'https://vectorboids.michaelbao.com/',
 		builtWith: ['HTML Canvas', 'TypeScript', 'Tailwind CSS', 'Svelte', 'Cloudflare Pages'],
 		year: 2025
 	},
@@ -63,7 +63,7 @@ export const projects: Projects = {
 		description:
 			"A word search game with a million lines of words. The game has three line modes: 25, 100, and 100,000 (and yes it's not a million but close enough). The game is the same for everyone, so finding a word will show up for everyone.",
 		github: 'https://github.com/tcmmichaelb139/onemillionwordsearch',
-		demo: 'https://onemillionwordsearch.michaelbao.io/',
+		demo: 'https://onemillionwordsearch.michaelbao.com/',
 		builtWith: ['Svelte', 'TypeScript', 'Tailwind CSS', 'Cloudflare Pages', 'Python'],
 		year: 2024
 	},
@@ -72,7 +72,7 @@ export const projects: Projects = {
 		description:
 			'24 game solver and generator. A simple game where you have to use 4 numbers to get 24 using basic operations.',
 		github: 'https://github.com/tcmmichaelb139/24',
-		demo: 'https://24.michaelbao.io/',
+		demo: 'https://24.michaelbao.com/',
 		builtWith: ['Svelte', 'TypeScript', 'Cloudflare Pages'],
 		year: 2022
 	},
@@ -82,7 +82,7 @@ export const projects: Projects = {
 		description:
 			'A simple particle simulator for various objects including spheres and cubes where the particles avoid the mouse based on certain parameters.',
 		github: 'https://github.com/tcmmichaelb139/particle-avoidance',
-		demo: 'https://avoid-particles.michaelbao.io/',
+		demo: 'https://avoid-particles.michaelbao.com/',
 		builtWith: ['three.js', 'TypeScript', 'Svelte', 'Cloudflare Pages'],
 		year: 2024
 	},
@@ -108,7 +108,7 @@ export const projects: Projects = {
 			'https://raw.githubusercontent.com/tcmmichaelb139/cfbot/refs/heads/main/assets/website.png',
 		description: 'Codeforces bot for visualizing stats',
 		github: 'https://github.com/tcmmichaelb139/cfbot',
-		demo: 'https://cfbot.michaelbao.io/',
+		demo: 'https://cfbot.michaelbao.com/',
 		builtWith: ['React', 'D3.js', 'Chart.js', 'Tailwind CSS', 'Codeforces API'],
 		year: 2022
 	},
@@ -139,12 +139,29 @@ export const projects: Projects = {
 		builtWith: ['OpenAI Whisper ', 'Python', 'Gradio', 'Hugging Face'],
 		year: 2025
 	},
-	'michaelbao.io': {
+	'michaelbao.com': {
 		cover: '',
 		description: 'My personal website.',
-		github: 'https://github.com/tcmmichaelb139/michaelbao.io',
-		demo: 'https://michaelbao.io/',
+		github: 'https://github.com/tcmmichaelb139/michaelbao.com',
+		demo: 'https://michaelbao.com/',
 		builtWith: ['Svelte', 'Tailwind CSS', 'Cloudflare Pages'],
 		year: 2024
+	},
+	'Adaptive Rock Paper Scissors': {
+		cover: '',
+		description: 'Simple rock-paper-scissors game implemented in Python with different strategies.',
+		github: 'https://github.com/tcmmichaelb139/adaptive-rps',
+		demo: '',
+		builtWith: ['Python', 'Reinforcement Learning'],
+		year: 2025
+	},
+	'Zheng Zero': {
+		cover: '',
+		description:
+			'Created a double DQN model in Python for the card game Zheng Shang You. Achieved ~70% win rate against greedy random players.',
+		github: 'https://github.com/tcmmichaelb139/zheng-zero',
+		demo: '',
+		builtWith: ['Python', 'PyTorch', 'Reinforcement Learning'],
+		year: 2025
 	}
 };
