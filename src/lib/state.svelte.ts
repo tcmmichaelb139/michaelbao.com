@@ -31,23 +31,6 @@ interface Projects {
 }
 
 export const projects: Projects = {
-	'Zheng Zero': {
-		cover: '',
-		description:
-			'Created a double DQN model for the card game Zheng Shang You. Achieved ~70% win rate against greedy random players.',
-		github: 'https://github.com/tcmmichaelb139/zheng-zero',
-		demo: '',
-		builtWith: ['Python', 'PyTorch', 'Reinforcement Learning'],
-		year: 2025
-	},
-	'Adaptive Rock Paper Scissors': {
-		cover: '',
-		description: 'Simple rock-paper-scissors game implemented in Python with different strategies.',
-		github: 'https://github.com/tcmmichaelb139/adaptive-rps',
-		demo: '',
-		builtWith: ['Python', 'Reinforcement Learning'],
-		year: 2025
-	},
 	'Obsidian Tokyo Night Theme': {
 		cover: '/projects/tokyonight.png',
 		description:
@@ -92,6 +75,26 @@ export const projects: Projects = {
 		demo: 'https://24.michaelbao.com/',
 		builtWith: ['Svelte', 'TypeScript', 'Cloudflare Pages'],
 		year: 2022
+	},
+
+	// after first 5 that show
+
+	'Zheng Zero': {
+		cover: '',
+		description:
+			'Created a double DQN model for the card game Zheng Shang You. Achieved ~70% win rate against greedy random players.',
+		github: 'https://github.com/tcmmichaelb139/zheng-zero',
+		demo: '',
+		builtWith: ['Python', 'PyTorch', 'Reinforcement Learning'],
+		year: 2025
+	},
+	'Adaptive Rock Paper Scissors': {
+		cover: '',
+		description: 'Simple rock-paper-scissors game implemented in Python with different strategies.',
+		github: 'https://github.com/tcmmichaelb139/adaptive-rps',
+		demo: '',
+		builtWith: ['Python', 'Reinforcement Learning'],
+		year: 2025
 	},
 	'Particle Avoidance Simulator': {
 		cover:
