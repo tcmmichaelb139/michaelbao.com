@@ -31,6 +31,23 @@ interface Projects {
 }
 
 export const projects: Projects = {
+	'Zheng Zero': {
+		cover: '',
+		description:
+			'Created a double DQN model for the card game Zheng Shang You. Achieved ~70% win rate against greedy random players.',
+		github: 'https://github.com/tcmmichaelb139/zheng-zero',
+		demo: '',
+		builtWith: ['Python', 'PyTorch', 'Reinforcement Learning'],
+		year: 2025
+	},
+	'Adaptive Rock Paper Scissors': {
+		cover: '',
+		description: 'Simple rock-paper-scissors game implemented in Python with different strategies.',
+		github: 'https://github.com/tcmmichaelb139/adaptive-rps',
+		demo: '',
+		builtWith: ['Python', 'Reinforcement Learning'],
+		year: 2025
+	},
 	'Obsidian Tokyo Night Theme': {
 		cover: '/projects/tokyonight.png',
 		description:
@@ -82,7 +99,7 @@ export const projects: Projects = {
 		description:
 			'A simple particle simulator for various objects including spheres and cubes where the particles avoid the mouse based on certain parameters.',
 		github: 'https://github.com/tcmmichaelb139/particle-avoidance',
-		demo: 'https://avoid-particles.michaelbao.com/',
+		demo: 'https://particle-avoidance.michaelbao.com',
 		builtWith: ['three.js', 'TypeScript', 'Svelte', 'Cloudflare Pages'],
 		year: 2024
 	},
@@ -146,22 +163,5 @@ export const projects: Projects = {
 		demo: 'https://michaelbao.com/',
 		builtWith: ['Svelte', 'Tailwind CSS', 'Cloudflare Pages'],
 		year: 2024
-	},
-	'Adaptive Rock Paper Scissors': {
-		cover: '',
-		description: 'Simple rock-paper-scissors game implemented in Python with different strategies.',
-		github: 'https://github.com/tcmmichaelb139/adaptive-rps',
-		demo: '',
-		builtWith: ['Python', 'Reinforcement Learning'],
-		year: 2025
-	},
-	'Zheng Zero': {
-		cover: '',
-		description:
-			'Created a double DQN model in Python for the card game Zheng Shang You. Achieved ~70% win rate against greedy random players.',
-		github: 'https://github.com/tcmmichaelb139/zheng-zero',
-		demo: '',
-		builtWith: ['Python', 'PyTorch', 'Reinforcement Learning'],
-		year: 2025
 	}
 };
